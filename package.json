@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/JulienLaforge/la-forge-du-web/issues"
   },
-  "homepage": "https://github.com/JulienLaforge/la-forge-du-web#readme"
+  "homepage": "https://github.com/JulienLaforge/la-forge-du-web#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
