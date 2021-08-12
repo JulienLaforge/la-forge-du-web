@@ -1,0 +1,23 @@
+{
+  "name": "laforgeduweb",
+  "version": "1.0.0",
+  "description": "Portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulienLaforge/la-forge-du-web.git"
+  },
+  "keywords": [
+    "portfolio",
+    "challenge"
+  ],
+  "author": "Julien Laforge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulienLaforge/la-forge-du-web/issues"
+  },
+  "homepage": "https://github.com/JulienLaforge/la-forge-du-web#readme"
+}
