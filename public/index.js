@@ -1,10 +1,8 @@
 let gap = 25;
-
 let opacity_top = 255;
 let opacity_bot = 0;
 let isDone = false;
 let lines = [];
-let line1, line2, line3;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
