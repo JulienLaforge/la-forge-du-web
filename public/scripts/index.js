@@ -48,7 +48,6 @@ function windowResized() {
 }
 
 function drawLine(l) {
-  noStroke();
   stroke(247, 224, 87);
   strokeWeight(l.thickness);
   line(l.x1, l.y1, l.x2, l.y2);

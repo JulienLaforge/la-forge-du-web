@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/index.html"));
 })
 
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/not_found.html"));
+})
+
 app.listen((process.env.PORT || 3000), () => {
   console.log(`App is listening !`);
 })
