@@ -1,9 +1,3 @@
-let gap = 25;
-let opacity_top = 255;
-let opacity_bot = 0;
-let isDone = false;
-let rectPosY = 5;
-let color;
 let canvas;
 
 function setup() {

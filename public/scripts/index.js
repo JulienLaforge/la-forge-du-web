@@ -1,12 +1,15 @@
+let canvas;
 let gap = 25;
-let opacity_top = 255;
-let opacity_bot = 0;
 let isDone = false;
 let lines = [];
+let opacity_top = 255;
+let opacity_bot = 0;
 let rectPosY = 5;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0);
+  canvas.style('z-index', '-1');
 
   for (let i = 0; i<3; i++) {
     lines.push({
@@ -22,9 +25,14 @@ function setup() {
 function draw() {
   background(255, 255, 245);
 
-  drawTriangle();
   lines.forEach(line => {
-    drawLine(line);
+    drawLine(line, true);
+  });
+
+  drawTriangle();
+
+  lines.forEach(line => {
+    drawLine(line, false);
   });
 
   if (!isDone && frameCount > 100) {
@@ -33,6 +41,7 @@ function draw() {
     if (frameCount %5 == 0) gap++;
     if (frameCount %2 == 0) rectPosY++;
   }
+
   if (opacity_top == 0) isDone = true;
 
   drawRectangle();
@@ -44,13 +53,18 @@ function windowResized() {
   lines.forEach(line => {
     line.x2 = width;
   });
-
 }
 
-function drawLine(l) {
-  stroke(247, 224, 87);
+function drawLine(l, isBackground) {
+  let offset = 0;
+  if (isBackground) {
+    offset = 4;
+    stroke(230);
+  } else {
+    stroke(247, 224, 87);
+  };
   strokeWeight(l.thickness);
-  line(l.x1, l.y1, l.x2, l.y2);
+  line(l.x1, l.y1+offset, l.x2, l.y2+offset);
 }
 
 function drawRectangle() {
