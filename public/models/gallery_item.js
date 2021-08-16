@@ -9,7 +9,7 @@ class GalleryItem {
   draw() {
     let container, titleContainer, link, img, title;
 
-    link = createA('https://laforgeduweb.com/' + this.address, '');
+    link = createA('http://localhost:3000' + this.address, '');
     link.class("link");
 
     container = createDiv();

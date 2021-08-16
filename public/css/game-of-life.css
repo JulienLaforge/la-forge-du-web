@@ -1,0 +1,30 @@
+html, body {
+    margin: 0 0;
+    background-color: rgb(255, 255, 255);
+}
+
+#container {
+    /* margin-top: 30px; */
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* background-color: white; */
+}
+
+.cell {
+    color: "rgb(255, 255, 255)";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.livingCell {
+    color: "rgb(25, 25, 25)";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.deadCell {
+    color: "rgb(255, 255, 255)";
+    position: absolute;
+    border-radius: 50%;
+}

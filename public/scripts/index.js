@@ -30,11 +30,13 @@ function setup() {
 function draw() {
   background(255, 111, 97);
 
+  drawWhiteTriangle();
+
   lines.forEach(line => {
     drawLine(line, true);
   });
 
-  drawTriangle();
+  drawOrangeTriangle();
 
   lines.forEach(line => {
     drawLine(line, false);
@@ -81,13 +83,18 @@ function drawRectangle() {
   rect(40, rectPosY, 150, 150);
 }
 
-function drawTriangle() {
+function drawWhiteTriangle() {
   noStroke();
   fill(255);
   triangle(0, -height/3, width, -height/3, 0, height);
+}
+
+function drawOrangeTriangle() {
+  noStroke();
   fill(255, 111, 97);
   triangle(width, -height/3, width, height, 0, height);
 }
+
 
 function drawText() {
   noStroke();
