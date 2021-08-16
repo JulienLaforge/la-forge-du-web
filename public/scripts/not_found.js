@@ -7,7 +7,7 @@ function setup() {
 }
 
 function draw() {
-  background(255, 255, 245);
+  background(255);
   drawTriangle(-height/4, width/4, 1);
   drawTriangle(-height/3, width/3, 2);
 }

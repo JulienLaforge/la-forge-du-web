@@ -5,11 +5,14 @@ let lines = [];
 let opacity_top = 255;
 let opacity_bot = 0;
 let rectPosY = 5;
+let gallery_item;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.style('z-index', '-1');
+
+  gallery_item = new GalleryItem(createVector(40, 230));
 
   for (let i = 0; i<3; i++) {
     lines.push({
@@ -20,10 +23,11 @@ function setup() {
       thickness: random(3, 16),
     });
   }
+  gallery_item.draw();
 }
 
 function draw() {
-  background(255, 255, 245);
+  background(255);
 
   lines.forEach(line => {
     drawLine(line, true);
