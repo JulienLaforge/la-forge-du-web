@@ -7,7 +7,7 @@ class GalleryItem {
   }
 
   draw() {
-    let container, titleContainer, link, img, title;
+    let container, titleContainer, link, img, title, tooltip;
 
     link = createA('https://laforgeduweb.com' + this.address, '');
     link.class("link");
@@ -24,12 +24,16 @@ class GalleryItem {
     titleContainer.class("titleContainer");
 
     title = createP(this.title);
-    title.class("title")
+    title.class("title");
+
+    tooltip = createSpan(this.title);
+    tooltip.class("tooltip");
 
     container.parent(link);
     container.child(img);
     container.child(titleContainer);
     titleContainer.child(title);
+    title.child(tooltip);
 
     link.position(this.pos.x, this.pos.y);
   }

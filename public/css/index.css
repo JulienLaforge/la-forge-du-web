@@ -16,4 +16,39 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  border-bottom: 1px dotted rgb(255, 255, 245);
+}
+
+.title .tooltip {
+  visibility: hidden;
+  width: 100%;
+  background-color: rgb(69, 181, 170);
+  color: rgb(255, 255, 245);
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  bottom: 450%;
+  left: 10%;
+  /* margin-left: -60px */
+}
+
+.title:hover .tooltip {
+  visibility: visible;
+}
+
+.title .tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 10%;
+  /* margin-left: -10px; */
+  border-width: 15px;
+  border-style: solid;
+  border-color: rgb(69, 181, 170) transparent transparent transparent;
 }
