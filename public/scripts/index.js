@@ -5,14 +5,12 @@ let lines = [];
 let opacity_top = 255;
 let opacity_bot = 0;
 let rectPosY = 5;
-let gallery_item;
+let gallery_item, gallery;
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
   canvas.style('z-index', '-1');
-
-  gallery_item = new GalleryItem(createVector(40, 230));
 
   for (let i = 0; i<3; i++) {
     lines.push({
@@ -23,11 +21,14 @@ function setup() {
       thickness: random(3, 16),
     });
   }
-  gallery_item.draw();
+
+  gallery = new Gallery(40, 230, width);
+  gallery.setup();
+  gallery.display();
 }
 
 function draw() {
-  background(255);
+  background(255, 111, 97);
 
   lines.forEach(line => {
     drawLine(line, true);
@@ -57,6 +58,7 @@ function windowResized() {
   lines.forEach(line => {
     line.x2 = width;
   });
+  gallery.update(width, height);
 }
 
 function drawLine(l, isBackground) {
@@ -81,8 +83,10 @@ function drawRectangle() {
 
 function drawTriangle() {
   noStroke();
+  fill(255);
+  triangle(0, -height/3, width, -height/3, 0, height);
   fill(255, 111, 97);
-  triangle(width, -height/3, width, height, width/3, height);
+  triangle(width, -height/3, width, height, 0, height);
 }
 
 function drawText() {

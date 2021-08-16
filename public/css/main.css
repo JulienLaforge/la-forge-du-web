@@ -1,0 +1,10 @@
+@font-face {
+  font-family:"Roboto Mono";
+  src: url("../fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 111, 97);
+}

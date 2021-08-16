@@ -1,9 +1,9 @@
 class GalleryItem {
-  constructor(pos)  {
-    this.pos = pos;
-    this.address = 'plop';
-    this.title = 'plop';
-    this.imagePath = 'images/gol_400x400.jpg';
+  constructor(x, y, title, imagePath, address)  {
+    this.pos = createVector(x, y);
+    this.title = title;
+    this.imagePath = imagePath;
+    this.address = address;
   }
 
   draw() {
@@ -32,6 +32,5 @@ class GalleryItem {
     titleContainer.child(title);
 
     link.position(this.pos.x, this.pos.y);
-
   }
 }
