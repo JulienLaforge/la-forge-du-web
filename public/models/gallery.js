@@ -16,7 +16,8 @@ class Gallery {
           let title = projects[step].title;
           let imagePath = projects[step].imagePath;
           let address = projects[step].address;
-          this.gallery_items.push(new GalleryItem(newPos.x, newPos.y, title, imagePath, address));
+          let tooltip = projects[step].tooltip;
+          this.gallery_items.push(new GalleryItem(newPos.x, newPos.y, title, imagePath, address, tooltip));
         }
         newPos.x += 200 + this.gap;
         step++;

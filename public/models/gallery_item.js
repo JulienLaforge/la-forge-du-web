@@ -1,15 +1,16 @@
 class GalleryItem {
-  constructor(x, y, title, imagePath, address)  {
+  constructor(x, y, title, imagePath, address, tooltip)  {
     this.pos = createVector(x, y);
     this.title = title;
     this.imagePath = imagePath;
     this.address = address;
+    this.tooltip = tooltip;
   }
 
   draw() {
     let container, titleContainer, link, img, title, tooltip;
 
-    link = createA('https://laforgeduweb.com' + this.address, '');
+    link = createA(ADDRESS + this.address, '');
     link.class("link");
 
     container = createDiv();
@@ -26,8 +27,10 @@ class GalleryItem {
     title = createP(this.title);
     title.class("title");
 
-    tooltip = createSpan(this.title);
-    tooltip.class("tooltip");
+    if (this.tooltip) {
+      tooltip = createSpan(this.title);
+      tooltip.class("tooltip");
+    }
 
     container.parent(link);
     container.child(img);
