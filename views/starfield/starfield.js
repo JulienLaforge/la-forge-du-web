@@ -1,12 +1,18 @@
 let canvas;
+let infos;
 
 let stars = new Array(1000);
 let speed;
 let size;
 
+
 function setup() {
-  canvas = createCanvas(windowWidth/2, windowHeight);
-  canvas.position(width, 0);
+  infos = new ProjectInfos("starfield");
+  project = new ProjectCanvas();
+
+  project.create();
+  infos.create();
+  checkWindow();
 
   for (let i = 0; i < stars.length; i++) {
     stars[i] = new Star();
@@ -24,9 +30,13 @@ function draw() {
   }
 }
 
+function checkWindow() {
+  project.show();
+  infos.show();
+}
+
 function windowResized() {
-  resizeCanvas(windowWidth/2, windowHeight);
-  canvas.position(width, 0);
+  checkWindow();
   size = width/300;
   speed = map(mouseX+width*2, width/2, width, 1, 10);
 }
