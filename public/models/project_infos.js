@@ -11,10 +11,11 @@ class ProjectInfos {
   }
 
   show() {
-    this.container.position(0, 0);
     if (windowWidth < windowHeight) {
+      this.container.position(0, 3*windowHeight/5);
       this.container.size(windowWidth, 2*windowHeight/5);
     } else {
+      this.container.position(0, 0);
       this.container.size(2*windowWidth/5, windowHeight);
     }
   }

@@ -9,7 +9,7 @@ class ProjectCanvas {
 
   show() {
     if (windowWidth < windowHeight) {
-      this.canvas.position(0, 2*windowHeight/5);
+      this.canvas.position(0,0);
       resizeCanvas(windowWidth, 3*windowHeight/5);
     }
     else {
