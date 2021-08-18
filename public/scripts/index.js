@@ -85,7 +85,7 @@ function drawRectangle() {
 
 function drawWhiteTriangle() {
   noStroke();
-  fill(255);
+  fill(255, 255, 245);
   triangle(0, -height/3, width, -height/3, 0, height);
 }
 

@@ -3,6 +3,12 @@ const ADDRESS = "https://laforgeduweb.com";
 
 let projects = [
   {
+    title: "menger sponge",
+    imagePath: "images/menger_sponge_400x400.png",
+    address: "/menger_sponge",
+    tooltip: false,
+  },
+  {
     title: "starfield",
     imagePath: "images/starfield_400x400.png",
     address: "/starfield",

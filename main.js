@@ -18,6 +18,11 @@ app.get('/starfield', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/starfield/starfield.html"));
 });
 
+app.use('/menger_sponge', express.static(__dirname + '/views/menger_sponge'));
+app.get('/menger_sponge', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/menger_sponge/menger_sponge.html"));
+});
+
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/not_found.html"));
 });

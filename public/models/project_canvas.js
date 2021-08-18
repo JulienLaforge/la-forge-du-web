@@ -1,9 +1,10 @@
 class ProjectCanvas {
-  constructor() {
+  constructor(renderer = P2D) {
+    this.renderer = renderer;
   }
 
   create() {
-    this.canvas = createCanvas(windowWidth, windowHeight);
+    this.canvas = createCanvas(windowWidth, windowHeight, this.renderer);
 
   }
 
