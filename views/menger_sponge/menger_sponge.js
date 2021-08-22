@@ -38,7 +38,7 @@ function draw() {
   a += 0.01;
 }
 
-function mousePressed() {
+function mouseClicked() {
   let next = [];
   nbClicks++;
   if (nbClicks < 4) {

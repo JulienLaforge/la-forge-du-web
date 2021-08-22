@@ -23,6 +23,11 @@ app.get('/menger_sponge', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/menger_sponge/menger_sponge.html"));
 });
 
+app.use('/snake', express.static(__dirname + '/views/snake'));
+app.get('/snake', (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/snake/snake.html"));
+});
+
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname + "/views/not_found.html"));
 });
